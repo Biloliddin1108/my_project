@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
+import 'package:my_project/presentation/ui/screens/main/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_shop.dart';
@@ -17,7 +18,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<String> urls = [
-    "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRSEMOk7G0lygWQukgJp_Is_ypL0dwsM1SjA2mbiCSYipFU6u4O0WTHM5MigtP099-zY-fKtZIt0Q3cPW3hDrIznucMBCJrO5nZmrRMTDnAI1AXq4FWbvVllgv-FEJ3WzNUX9pgPQ&usqp=CAc",
+    "https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png",
     "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/311887/01/sv04/fnd/IND/fmt/png/Softride-Premier-Men's-Slip-On-Shoes",
     "https://static.vecteezy.com/system/resources/thumbnails/047/249/331/small/sweater-shirt-hoodie-isolated-png.png",
     "https://purepng.com/public/uploads/large/purepng.com-the-north-face-hero-bagbagbackpacksthe-north-facehero-baglaptop-pocket-1421526272830qkxwn.png",
@@ -167,18 +168,27 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 Expanded(
                   child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 16,
-                      mainAxisSpacing: 16,
-                      mainAxisExtent: 300,
-                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 16,
+                          mainAxisSpacing: 16,
+                          mainAxisExtent: 300,
+                        ),
                     itemCount: urls.length,
                     itemBuilder: (context, index) {
                       return WItemArrival(
                         url: urls[index],
                         product: products[index],
                         price: prices[index],
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ProductScreen(),
+                            ),
+                          );
+                        },
                       );
                     },
                   ),
@@ -255,7 +265,10 @@ class _MainScreenState extends State<MainScreen> {
                 const WDrawerItem(icon: AppIcons.gift, title: "Rewards"),
                 const WDrawerItem(icon: AppIcons.help, title: "Help"),
                 const WDrawerItem(icon: AppIcons.action, title: "Contact Us"),
-                const WDrawerItem(icon: AppIcons.privacy, title: "Privacy Policy"),
+                const WDrawerItem(
+                  icon: AppIcons.privacy,
+                  title: "Privacy Policy",
+                ),
                 const WDrawerItem(icon: AppIcons.logout, title: "Logout"),
               ],
             ),

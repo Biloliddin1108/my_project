@@ -21,5 +21,9 @@ abstract class AppIcons{
   static const String action = '$_basePath/action.svg';
   static const String like = '$_basePath/like.svg';
   static const String back = '$_basePath/back_icon.svg';
+  static const String truck = '$_basePath/truck.svg';
+  static const String money = '$_basePath/money.svg';
+  static const String policy = '$_basePath/policy.svg';
+  static const String replace = '$_basePath/replace.svg';
 
 }
