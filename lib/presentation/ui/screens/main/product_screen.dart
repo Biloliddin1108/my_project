@@ -5,11 +5,14 @@ import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_color.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_comfort.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_title.dart';
+import 'package:my_project/presentation/ui/widgets/w_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_rating.dart';
 import '../splash/widgets/w_dot.dart';
 
 class ProductScreen extends StatefulWidget {
-  const ProductScreen({super.key});
+  final int heroIndex;
+
+  const ProductScreen({super.key, required this.heroIndex});
 
   @override
   State<ProductScreen> createState() => _ProductScreenState();
@@ -41,7 +44,7 @@ class _ProductScreenState extends State<ProductScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 36, bottom: 20),
+                  padding: const EdgeInsets.only(top: 28, bottom: 12),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -49,9 +52,16 @@ class _ProductScreenState extends State<ProductScreen> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: SvgPicture.asset(AppIcons.back),
+                        behavior: HitTestBehavior.opaque,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset(AppIcons.back),
+                        ),
                       ),
-                      SvgPicture.asset(AppIcons.like),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset(AppIcons.like),
+                      ),
                     ],
                   ),
                 ),
@@ -64,20 +74,15 @@ class _ProductScreenState extends State<ProductScreen> {
                       });
                     },
                     controller: _pageController,
-                    children: [
-                      Image.network(
-                        "https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png",
-                        fit: BoxFit.cover,
-                      ),
-                      Image.network(
-                        "https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png",
-                        fit: BoxFit.cover,
-                      ),
-                      Image.network(
-                        "https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png",
-                        fit: BoxFit.cover,
-                      ),
-                    ],
+                    children: List.generate(3, (index){
+                      return Hero(
+                        tag: "arrival_${widget.heroIndex}",
+                        child: Image.network(
+                          "https://static.vecteezy.com/system/resources/previews/046/829/689/non_2x/smart-watch-isolated-on-transparent-background-png.png",
+                          fit: BoxFit.cover,
+                        ),
+                      );
+                    },)
                   ),
                 ),
                 Padding(
@@ -215,6 +220,7 @@ lores et quas molestias excepturi...""",
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.grey,
+                      fontFamily: "MainFont",
                     ),
                   ),
                 ),
@@ -226,10 +232,20 @@ voluptatum deleniti atque .""",
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: AppColors.grey,
+                    fontFamily: "MainFont",
                   ),
                 ),
               ],
             ),
+          ),
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              WButton(onTap: () {}, title: "Add To Cart",),
+            ],
           ),
         ),
       ),

@@ -7,7 +7,8 @@ class WItemArrival extends StatelessWidget {
   final String product;
   final String price;
   final VoidCallback onTap;
-  const WItemArrival({super.key, required this.url, required this.product, required this.price, required this.onTap});
+  final int index;
+  const WItemArrival({super.key, required this.url, required this.product, required this.price, required this.onTap, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,12 @@ class WItemArrival extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 16),
             padding: EdgeInsets.all(20),
             color: AppColors.itemColor,
-            child: Image.network(
-              height: 150,
-              url,
+            child: Hero(
+              tag: "arrival_$index",
+              child: Image.network(
+                height: 150,
+                url,
+              ),
             ),
           ),
           RatingBar.builder(
