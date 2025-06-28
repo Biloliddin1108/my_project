@@ -5,8 +5,16 @@ import '../resource/app_colors.dart';
 class WButton extends StatelessWidget {
   final VoidCallback onTap;
   final String title;
+  final Color color;
+  final double radius;
 
-  const WButton({super.key, required this.onTap, required this.title});
+  const WButton({
+    super.key,
+    required this.onTap,
+    required this.title,
+    this.color = AppColors.primary,
+    this.radius = 0,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +24,10 @@ class WButton extends StatelessWidget {
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 16),
         alignment: Alignment.center,
-        decoration: BoxDecoration(color: AppColors.primary),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(radius),
+        ),
         child: Text(
           title,
           style: TextStyle(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
-import 'package:my_project/presentation/ui/screens/main/card_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/cart_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/home_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/profile_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/wishlist_screen.dart';
@@ -41,6 +41,7 @@ class _MainScreenState extends State<MainScreen>
               CardScreen(),
               ProfileScreen(),
             ],
+            controller: _tabController,
           ),
           bottomNavigationBar: Container(
             padding: EdgeInsets.symmetric(vertical: 18),
