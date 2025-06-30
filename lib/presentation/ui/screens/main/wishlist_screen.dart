@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_heart.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 
-import '../../resource/App_icons.dart';
 
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
@@ -30,6 +28,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         backgroundColor: AppColors.white,
         centerTitle: true,
         title: const Text(

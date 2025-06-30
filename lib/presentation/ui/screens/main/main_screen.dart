@@ -18,10 +18,18 @@ class _MainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  int _selectedIndex = 0;
+
   @override
   void initState() {
-    super.initState();
     _tabController = TabController(length: 4, vsync: this);
+    super.initState();
+
+    _tabController.addListener(() {
+      setState(() {
+        _selectedIndex = _tabController.index;
+      });
+    });
   }
 
   @override
@@ -35,13 +43,13 @@ class _MainScreenState extends State<MainScreen>
           backgroundColor: AppColors.white,
 
           body: TabBarView(
-            children: const [
+            controller: _tabController,
+            children:  [
               HomeScreen(),
               WishlistScreen(),
               CardScreen(),
               ProfileScreen(),
             ],
-            controller: _tabController,
           ),
           bottomNavigationBar: Container(
             padding: EdgeInsets.symmetric(vertical: 18),
@@ -49,7 +57,7 @@ class _MainScreenState extends State<MainScreen>
               color: AppColors.white,
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.grey.withOpacity(0.2),
+                  color: AppColors.grey.withValues(alpha: 0.2),
                   spreadRadius: 3,
                   blurRadius: 7,
                 ),
@@ -64,12 +72,16 @@ class _MainScreenState extends State<MainScreen>
               dividerColor: Colors.transparent,
               indicatorColor: Colors.transparent,
               controller: _tabController,
-              onTap: (i) {},
+              onTap: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
               tabs: [
-                Tab(child: SvgPicture.asset(AppIcons.home)),
-                Tab(child: SvgPicture.asset(AppIcons.wishlist)),
-                Tab(child: SvgPicture.asset(AppIcons.cart)),
-                Tab(child: SvgPicture.asset(AppIcons.account)),
+                Tab(child: SvgPicture.asset(_selectedIndex == 0 ? AppIcons.homeSelected: AppIcons.home)),
+                Tab(child: SvgPicture.asset(_selectedIndex == 1 ? AppIcons.wishlistSelected: AppIcons.wishlist)),
+                Tab(child: SvgPicture.asset(_selectedIndex == 2 ? AppIcons.cartSelected: AppIcons.cart)),
+                Tab(child: SvgPicture.asset(_selectedIndex == 3 ? AppIcons.accountSelected: AppIcons.account)),
               ],
             ),
           ),
@@ -78,3 +90,4 @@ class _MainScreenState extends State<MainScreen>
     );
   }
 }
+

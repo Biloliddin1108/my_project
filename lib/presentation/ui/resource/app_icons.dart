@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 abstract class AppIcons{
   static const String _basePath = 'assets/icons';
   static const String google = '$_basePath/google.png';
@@ -26,11 +24,12 @@ abstract class AppIcons{
   static const String policy = '$_basePath/policy.svg';
   static const String replace = '$_basePath/replace.svg';
   static const String heart = '$_basePath/heart.svg';
-  static const String home1 = '$_basePath/home1.svg';
-  static const String wishlist1 = '$_basePath/wishlist1.svg';
-  static const String cart1 = '$_basePath/cart1.svg';
-  static const String account1 = '$_basePath/account1.svg';
   static const String delete = '$_basePath/delete.svg';
   static const String attation = '$_basePath/attation.svg';
+  static const String next = '$_basePath/next.svg';
+  static const String homeSelected = '$_basePath/home_selected.svg';
+  static const String wishlistSelected = '$_basePath/wishlist_selected.svg';
+  static const String cartSelected = '$_basePath/cart_selected.svg';
+  static const String accountSelected = '$_basePath/account_selected.svg';
 
 }
