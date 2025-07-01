@@ -3,6 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/orders_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/payment_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/shipping_adresses_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_account_items.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -65,14 +68,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Switch(value: false, onChanged: (_) {}),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const OrdersScreen();
+                          },
+                        ),
+                      );
+                    },
                     child: WAccountItems(
                       title: "My Orders",
                       child: SvgPicture.asset(AppIcons.next),
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const PaymentScreen();
+                          },
+                        ),
+                      );
+                    },
                     child: WAccountItems(
                       title: "Payment Method",
                       child: SvgPicture.asset(AppIcons.next),
@@ -83,7 +106,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Switch(value: false, onChanged: (_) {}),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const ShippingAdressesScreen();
+                          },
+                        ),
+                      );
+                    },
                     child: WAccountItems(
                       title: "Shipping Addresses",
                       child: SvgPicture.asset(AppIcons.next),

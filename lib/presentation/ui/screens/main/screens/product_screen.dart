@@ -7,7 +7,7 @@ import 'package:my_project/presentation/ui/screens/main/widgets/w_item_comfort.d
 import 'package:my_project/presentation/ui/screens/main/widgets/w_title.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_rating.dart';
-import '../splash/widgets/w_dot.dart';
+import '../../splash/widgets/w_dot.dart';
 
 class ProductScreen extends StatefulWidget {
   final int heroIndex;

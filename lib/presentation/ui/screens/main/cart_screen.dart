@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_title.dart';
+import 'package:my_project/presentation/ui/screens/main/widgets/w_count_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
 
 class CardScreen extends StatefulWidget {
@@ -42,7 +43,7 @@ class _CardScreenState extends State<CardScreen> {
                 itemCount: 5,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return WCartItem();
+                  return WCartItem(button:  WCountButton(),);
                 },
               ),
               const SizedBox(height: 48),

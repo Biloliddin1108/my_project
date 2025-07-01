@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_project/presentation/ui/screens/main/product_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_shop.dart';

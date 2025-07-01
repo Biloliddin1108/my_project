@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
-import 'package:my_project/presentation/ui/screens/main/product_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_heart.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 

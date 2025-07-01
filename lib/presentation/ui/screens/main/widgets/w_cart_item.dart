@@ -7,7 +7,8 @@ import '../../../widgets/w_button.dart';
 import '../../../widgets/w_rating.dart';
 
 class WCartItem extends StatelessWidget {
-  const WCartItem({super.key});
+  final Widget button;
+  const WCartItem({super.key, required this.button});
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +136,7 @@ class WCartItem extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 24),
-              WCountButton(),
+              button,
             ],
           ),
         ],

@@ -7,6 +7,7 @@ class WButton extends StatelessWidget {
   final String title;
   final Color color;
   final double radius;
+  final EdgeInsetsGeometry padding;
 
   const WButton({
     super.key,
@@ -14,6 +15,7 @@ class WButton extends StatelessWidget {
     required this.title,
     this.color = AppColors.primary,
     this.radius = 0,
+    this.padding = const EdgeInsets.symmetric(vertical: 16),
   });
 
   @override
@@ -22,7 +24,7 @@ class WButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 16),
+        padding: padding,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: color,
