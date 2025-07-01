@@ -5,7 +5,8 @@ import '../../../resource/app_colors.dart';
 class WTitle extends StatelessWidget {
   final String title;
   final String subtitle;
-  const WTitle({super.key, required this.title, required this.subtitle});
+  final Color? color;
+  const WTitle({super.key, required this.title, required this.subtitle, this.color});
 
   @override
   Widget build(BuildContext context) {
