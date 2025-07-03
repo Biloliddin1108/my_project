@@ -1,9 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/screens/onboarding/onboarding_screens.dart';
 import 'package:my_project/presentation/ui/screens/splash/widgets/w_dot.dart';
 import '../../resource/app_colors.dart';
 
+@RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -21,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _navigateToOnboarding() async {
     await Future.delayed(const Duration(seconds: 5));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnboardingScreens()),);
+    context.router.pushAll([ const OnboardingRoutes()]);
   }
 
   @override
@@ -36,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 SvgPicture.asset('assets/images/logo.svg'),
                 const SizedBox(height: 40.0),
-                Text.rich(
+                const Text.rich(
                   TextSpan(
                     text: 'Swip',
                     style: TextStyle(

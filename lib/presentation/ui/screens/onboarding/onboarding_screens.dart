@@ -1,11 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
 import 'package:my_project/presentation/ui/widgets/w_onboarding.dart';
 import 'package:my_project/presentation/ui/screens/splash/widgets/w_dot.dart';
 import 'package:my_project/presentation/ui/screens/verification/login_screen.dart';
 
+@RoutePage()
 class OnboardingScreens extends StatefulWidget {
   const OnboardingScreens({super.key});
 
@@ -34,15 +36,11 @@ class _OnboardingScreensState extends State<OnboardingScreens> {
                       curve: Curves.easeInOut,
                     );
                   } else {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
-                    );
+                    context.router.pushAll([
+                       const LoginRoute(),
+                    ]);
                   }
                 },
-
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 24,

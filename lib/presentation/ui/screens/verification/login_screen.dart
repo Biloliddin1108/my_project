@@ -1,13 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/resource/app_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
 import 'package:my_project/presentation/ui/screens/main/main_screen.dart';
-import 'package:my_project/presentation/ui/screens/verification/forget_password_screen.dart';
 import 'package:my_project/presentation/ui/screens/verification/sign_up_screen.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
 
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -71,12 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.topRight,
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ForgetPasswordScreen(),
-                          ),
-                        );
+                        context.router.pushAll([const ForgetPasswordRoute()]);
                       },
                       child: Text(
                         "Forget Password ?",
@@ -91,9 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 40),
                   WButton(
                     onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => MainScreen()),
+                      context.router.replaceAll([const MainRoute()]
                       );
                     },
                     title: "Login",
@@ -176,12 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       alignment: PlaceholderAlignment.middle,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignUpScreen(),
-                            ),
-                          );
+                          context.router.pushAll([const SignUpRoute()]);
                         },
                         child: Text(
                           "Sign Up",

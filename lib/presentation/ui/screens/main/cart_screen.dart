@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_item.dart';
@@ -5,6 +6,7 @@ import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_title.dar
 import 'package:my_project/presentation/ui/screens/main/widgets/w_count_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
 
+@RoutePage()
 class CardScreen extends StatefulWidget {
   const CardScreen({super.key});
 

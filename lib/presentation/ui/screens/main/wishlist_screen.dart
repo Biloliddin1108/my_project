@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/product_screen.dart';
@@ -5,6 +6,7 @@ import 'package:my_project/presentation/ui/screens/main/widgets/w_heart.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 
 
+@RoutePage()
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
 

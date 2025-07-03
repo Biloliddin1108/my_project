@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
@@ -9,6 +10,7 @@ import 'package:my_project/presentation/ui/widgets/w_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_rating.dart';
 import '../../splash/widgets/w_dot.dart';
 
+@RoutePage()
 class ProductScreen extends StatefulWidget {
   final int heroIndex;
 

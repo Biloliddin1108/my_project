@@ -1,11 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
 import '../../../widgets/w_button.dart';
 import '../widgets/w_cart_item.dart';
-import '../widgets/w_count_button.dart';
 
+@RoutePage()
 class OrdersScreen extends StatefulWidget {
   const OrdersScreen({super.key});
 
