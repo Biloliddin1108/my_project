@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_shop.dart';
+import '../../../routes/route_path.dart';
 import '../../resource/App_icons.dart';
 import '../../resource/app_colors.dart';
 import '../../resource/app_images.dart';
@@ -131,8 +131,8 @@ class _HomeScreenState extends State<HomeScreen> {
               const Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 20),
-                  child: const Text(
+                  padding:  EdgeInsets.only(top: 32, bottom: 20),
+                  child:  Text(
                     "Shop By Category",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -184,13 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       product: products[index],
                       price: prices[index],
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder:
-                                (context) => ProductScreen(heroIndex: index),
-                          ),
-                        );
+                        context.router.pushNamed(RoutePath.product);
                       },
                       index: index,
                     );

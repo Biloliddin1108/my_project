@@ -10,4 +10,5 @@ class RoutePath {
   static const String profile = "profile";
 
   static const String order = "order";
+  static const String product = "product";
 }

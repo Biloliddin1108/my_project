@@ -28,7 +28,10 @@ class AppRouter extends $AppRouter {
         AutoRoute(
           page: RootHome.page,
           path: RoutePath.home,
-          children: [AutoRoute(page: HomeRoute.page, path: "")],
+          children: [
+            AutoRoute(page: HomeRoute.page, path: ""),
+            AutoRoute(page: ProductRoute.page, path: RoutePath.product),
+          ],
         ),
         AutoRoute(
           page: RootWishlist.page,

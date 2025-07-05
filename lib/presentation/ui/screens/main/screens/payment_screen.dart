@@ -121,9 +121,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 60),
-                  const Padding(
-                    padding: const EdgeInsets.only(top: 18),
+                  SizedBox(width: 60),
+                  Padding(
+                    padding: EdgeInsets.only(top: 18),
                     child: Text(
                       "CVV",
                       style: TextStyle(
