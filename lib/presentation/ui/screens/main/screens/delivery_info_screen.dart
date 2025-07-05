@@ -7,16 +7,17 @@ import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipp
 import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipping_info.dart';
 import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
+import '../../../widgets/w_button.dart';
 
 @RoutePage()
-class ShippingAdressesScreen extends StatefulWidget {
-  const ShippingAdressesScreen({super.key});
+class DeliveryInfoScreen extends StatefulWidget {
+  const DeliveryInfoScreen({super.key});
 
   @override
-  State<ShippingAdressesScreen> createState() => _ShippingAdressesScreenState();
+  State<DeliveryInfoScreen> createState() => _DeliveryInfoStateState();
 }
 
-class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
+class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +49,13 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
               SizedBox(),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(top: 16, bottom: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [WButton(onTap: () {}, title: "Checkout")],
         ),
       ),
       body: SingleChildScrollView(
@@ -108,7 +116,7 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                           WDeliveryShippingInfo(
                             name: "Saul Goodmate",
                             address:
-                                """16 E Birch Hill Road Fairbanks, NY, 99312 United States""",
+                            """16 E Birch Hill Road Fairbanks, NY, 99312 United States""",
                             phone: "865-5585 57587",
                           ),
                           Expanded(
@@ -167,13 +175,13 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                     title: 'Recent Save Addresses :',
                     name: "Anne Thurium",
                     address:
-                        """35 State Route 05, aw, Grantsville 26143 United States""",
+                    """35 State Route 05, aw, Grantsville 26143 United States""",
                   ),
                   const WDeliveryShippingItem(
                     title: 'All Delivery Address :',
                     name: "Anne Thurium",
                     address:
-                        """35 State Route 05, aw, Grantsville 26143 United States""",
+                    """35 State Route 05, aw, Grantsville 26143 United States""",
                   ),
                 ],
               ),

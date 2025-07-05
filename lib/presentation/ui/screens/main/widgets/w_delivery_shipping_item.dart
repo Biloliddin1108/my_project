@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipping_info.dart';
 
-class WDeliveryItem extends StatelessWidget {
+class WDeliveryShippingItem extends StatelessWidget {
   final String title;
   final String address;
   final String name;
   final String phone;
 
-  const WDeliveryItem({super.key, required this.title,  this.address = "",  this.name = "",  this.phone = ""});
+  const WDeliveryShippingItem({super.key, required this.title,  this.address = "",  this.name = "",  this.phone = ""});
 
   @override
   Widget build(BuildContext context) {

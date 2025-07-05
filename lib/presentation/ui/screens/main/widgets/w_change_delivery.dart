@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/add_address_screen.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/edit_address_screen.dart';
 
 import '../../../resource/app_colors.dart';
 
-class WDeliveryShippingInfo extends StatelessWidget {
+class WChangeDelivery extends StatelessWidget {
   final String name;
   final String address;
   final String phone;
-  const WDeliveryShippingInfo({super.key,  this.name = "",  this.address = "", this.phone = ""});
+  const WChangeDelivery({super.key, required this.name, required this.address, required this.phone});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 16),
-      width: 220,
+      width: 196,
       height: 180,
       padding: EdgeInsets.only(left: 24, right: 16),
       decoration: BoxDecoration(
@@ -34,15 +32,6 @@ class WDeliveryShippingInfo extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: "MainFont",
                 ),
-              ),
-              GestureDetector(
-                child: const Icon(
-                  Icons.edit,
-                  color: AppColors.green,
-                ),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddAddressScreen(),),);
-                },
               ),
             ],
           ),
@@ -67,6 +56,6 @@ class WDeliveryShippingInfo extends StatelessWidget {
           ),
         ],
       ),
-    );
+    );;
   }
 }
