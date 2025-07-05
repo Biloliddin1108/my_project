@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/add_address_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/payment_method_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/shipping_change_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipping_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipping_info.dart';
@@ -55,7 +56,19 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
         padding: const EdgeInsets.only(top: 16, bottom: 16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [WButton(onTap: () {}, title: "Checkout")],
+          children: [
+            WButton(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaymentMethodScreen(),
+                  ),
+                );
+              },
+              title: "Checkout",
+            ),
+          ],
         ),
       ),
       body: SingleChildScrollView(
@@ -116,7 +129,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                           WDeliveryShippingInfo(
                             name: "Saul Goodmate",
                             address:
-                            """16 E Birch Hill Road Fairbanks, NY, 99312 United States""",
+                                """16 E Birch Hill Road Fairbanks, NY, 99312 United States""",
                             phone: "865-5585 57587",
                           ),
                           Expanded(
@@ -175,13 +188,13 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                     title: 'Recent Save Addresses :',
                     name: "Anne Thurium",
                     address:
-                    """35 State Route 05, aw, Grantsville 26143 United States""",
+                        """35 State Route 05, aw, Grantsville 26143 United States""",
                   ),
                   const WDeliveryShippingItem(
                     title: 'All Delivery Address :',
                     name: "Anne Thurium",
                     address:
-                    """35 State Route 05, aw, Grantsville 26143 United States""",
+                        """35 State Route 05, aw, Grantsville 26143 United States""",
                   ),
                 ],
               ),

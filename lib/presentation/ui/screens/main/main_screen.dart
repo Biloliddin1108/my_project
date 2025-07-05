@@ -4,6 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
+import 'package:my_project/presentation/ui/screens/main/widgets/w_drawer_item.dart';
+import '../../resource/app_images.dart';
+
+
+final GlobalKey<ScaffoldState> scaffoldKeyMain = GlobalKey<ScaffoldState>();
 
 @RoutePage()
 class MainScreen extends StatefulWidget {
@@ -22,6 +27,59 @@ class _MainScreenState extends State<MainScreen> {
         final tabsRouter = AutoTabsRouter.of(context, watch: true);
         final currentIndex = tabsRouter.activeIndex;
         return Scaffold(
+          key: scaffoldKeyMain,
+          drawer: Drawer(
+            backgroundColor: AppColors.white,
+            child: ListView(
+              children: [
+                const SizedBox(height: 50),
+                SvgPicture.asset(AppImages.logo, width: 100),
+                SizedBox(height: 28),
+                Align(
+                  alignment: Alignment.center,
+                  child: const Text.rich(
+                    TextSpan(
+                      text: 'Swip',
+                      style: TextStyle(
+                        fontFamily: "MainFont",
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFF13005),
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'wide',
+                          style: TextStyle(
+                            fontFamily: "MainFont",
+                            fontSize: 28.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 30,
+                    right: 30,
+                    top: 40,
+                    bottom: 40,
+                  ),
+                  child: const Divider(color: AppColors.grey),
+                ),
+                const WDrawerItem(icon: AppIcons.gift, title: "Rewards"),
+                const WDrawerItem(icon: AppIcons.help, title: "Help"),
+                const WDrawerItem(icon: AppIcons.action, title: "Contact Us"),
+                const WDrawerItem(
+                  icon: AppIcons.privacy,
+                  title: "Privacy Policy",
+                ),
+                const WDrawerItem(icon: AppIcons.logout, title: "Logout"),
+              ],
+            ),
+          ),
+
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
               splashColor: Colors.transparent,

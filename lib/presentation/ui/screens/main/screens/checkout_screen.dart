@@ -2,20 +2,19 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/add_cart_screen.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
 import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
 
 @RoutePage()
-class PaymentScreen extends StatefulWidget {
-  const PaymentScreen({super.key});
+class CheckoutScreen extends StatefulWidget {
+  const CheckoutScreen({super.key});
 
   @override
-  State<PaymentScreen> createState() => _PaymentScreenState();
+  State<CheckoutScreen> createState() => _CheckoutScreenState();
 }
 
-class _PaymentScreenState extends State<PaymentScreen> {
+class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +54,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(top: 16, bottom: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [WButton(onTap: () {}, title: "Pay Now")],
         ),
       ),
       body: Padding(
@@ -167,105 +173,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ],
                 ),
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: WButton(
-                      onTap: () {
-                        showDialog(
-                          context: context,
-                          barrierDismissible: false,
-                          builder: (context) {
-                            return Dialog(
-                              backgroundColor: Colors.transparent,
-                              child: Container(
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 30,
-                                  horizontal: 16,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: AppColors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    SvgPicture.asset(AppIcons.attation),
-                                    const SizedBox(height: 30),
-                                    Text(
-                                      "Delete this Card?",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColors.black,
-                                        fontFamily: "MainFont",
-                                      ),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      "Do you want to delete this card?",
-                                      textAlign: TextAlign.center,
-
-                                      style: TextStyle(
-                                        color: AppColors.grey,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: "MainFont",
-                                      ),
-                                    ),
-                                    const SizedBox(height: 36),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: WButton(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder:
-                                                      (context) =>
-                                                          AddCartScreen(),
-                                                ),
-                                              );
-                                            },
-                                            radius: 70,
-                                            title: "Yes",
-                                          ),
-                                        ),
-                                        SizedBox(width: 20),
-                                        Expanded(
-                                          child: WButton(
-                                            onTap: () {
-                                              Navigator.pop(context);
-                                            },
-                                            radius: 70,
-                                            color: AppColors.yellow,
-                                            title: "No",
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                      title: "Delete Card",
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: WButton(
-                      onTap: () {},
-                      title: "+ Add Card",
-                      color: AppColors.yellow,
-                    ),
-                  ),
-                ],
               ),
             ],
           ),
