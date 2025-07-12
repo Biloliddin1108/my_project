@@ -46,7 +46,7 @@ class WItemArrival extends StatelessWidget {
             padding: const EdgeInsets.only(top: 6, bottom: 4),
             child: Text(
               product,
-              style: TextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: AppColors.black,
@@ -55,7 +55,7 @@ class WItemArrival extends StatelessWidget {
           ),
           Text(
             price,
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontFamily: "MainFont",
               fontWeight: FontWeight.bold,
               fontSize: 18,

@@ -17,11 +17,9 @@ class WAccountItems extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                fontFamily: "MainFont",
-                color: AppColors.black,
               ),
             ),
             child,

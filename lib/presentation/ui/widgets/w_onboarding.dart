@@ -19,7 +19,7 @@ class WOnboarding extends StatelessWidget {
         SizedBox(height: 100),
         Text(
           title,
-          style: const TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontSize: 26,
             fontWeight: FontWeight.bold,
             color: AppColors.black,
@@ -30,7 +30,7 @@ class WOnboarding extends StatelessWidget {
         Text(
           textAlign: TextAlign.center,
           description,
-          style: TextStyle(fontSize: 16, color: AppColors.grey),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16, color: AppColors.grey),
         ),
       ],
     );

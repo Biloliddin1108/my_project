@@ -32,16 +32,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     padding: const EdgeInsets.only(top: 28, bottom: 8),
                     child: Text(
                       "Register",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.black,
                         fontSize: 32,
                       ),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Create new account",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
@@ -95,7 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               onTap: () {},
                               child: Text(
                                 " Team of use",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   color: AppColors.primary,
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -109,7 +109,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               onTap: () {},
                               child: Text(
                                 "and",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   color: AppColors.black,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
@@ -122,7 +122,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               onTap: () {},
                               child: Text(
                                 " privacy notice",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   color: AppColors.primary,
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ],
                         text: "By signing below, you agree to the",
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: AppColors.black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         },
                         child: Text(
                           "Login",
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             color: AppColors.primary,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ],
                   text: "Already have an account?",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: AppColors.grey,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,

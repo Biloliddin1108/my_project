@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_project/presentation/routes/router.gr.dart';
-import 'package:my_project/presentation/ui/screens/onboarding/onboarding_screens.dart';
 import 'package:my_project/presentation/ui/screens/splash/widgets/w_dot.dart';
 import '../../resource/app_colors.dart';
 
@@ -39,10 +38,10 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 SvgPicture.asset('assets/images/logo.svg'),
                 const SizedBox(height: 40.0),
-                const Text.rich(
+                Text.rich(
                   TextSpan(
                     text: 'Swip',
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 38.0,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFFF13005),
@@ -50,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: [
                       TextSpan(
                         text: 'wide',
-                        style: TextStyle(fontSize: 38.0, color: Colors.black),
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 38.0, color: Colors.black),
                       ),
                     ],
                   ),

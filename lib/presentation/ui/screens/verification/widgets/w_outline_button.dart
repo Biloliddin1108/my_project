@@ -24,7 +24,7 @@ class WOutlineButton extends StatelessWidget {
         children: [
           Image.asset(icon,fit: BoxFit.cover,scale: 1,),
           SizedBox(width: 10,),
-          Text(text, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.black),),
+          Text(text, style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.black),),
 
         ],
       ),

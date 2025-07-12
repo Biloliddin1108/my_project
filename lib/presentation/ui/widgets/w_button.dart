@@ -32,7 +32,7 @@ class WButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.white,
             fontSize: 18,
             fontWeight: FontWeight.bold,

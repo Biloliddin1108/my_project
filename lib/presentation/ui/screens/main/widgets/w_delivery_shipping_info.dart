@@ -29,7 +29,7 @@ class WDeliveryShippingInfo extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   fontFamily: "MainFont",
@@ -50,7 +50,7 @@ class WDeliveryShippingInfo extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 12),
             child: Text(
               address,
-              style: TextStyle(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 fontFamily: "MainFont",
@@ -59,7 +59,7 @@ class WDeliveryShippingInfo extends StatelessWidget {
           ),
           Text(
             phone,
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               fontFamily: "MainFont",

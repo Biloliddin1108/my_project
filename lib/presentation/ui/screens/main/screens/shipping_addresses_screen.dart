@@ -36,9 +36,9 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+               Text(
                 "Shipping Addresses",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
@@ -70,7 +70,7 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                             padding: EdgeInsets.only(top: 16),
                             child: Text(
                               "Default Address :",
-                              style: TextStyle(
+                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                                 fontFamily: "MainFont",
@@ -91,7 +91,7 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                               },
                               child: Text(
                                 "Change",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
                                   fontFamily: "MainFont",
@@ -138,7 +138,7 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                                     SizedBox(height: 8),
                                     Text(
                                       "Add",
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                         fontFamily: "MainFont",
@@ -147,7 +147,7 @@ class _ShippingAdressesScreenState extends State<ShippingAdressesScreen> {
                                     ),
                                     Text(
                                       "Address",
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                         fontFamily: "MainFont",

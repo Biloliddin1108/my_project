@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/product_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_heart.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 
+import '../../../routes/router.gr.dart';
 
 @RoutePage()
 class WishlistScreen extends StatefulWidget {
@@ -33,9 +33,9 @@ class _WishlistScreenState extends State<WishlistScreen> {
         forceMaterialTransparency: true,
         backgroundColor: AppColors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "Wishlist",
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.black,
             fontSize: 22,
             fontFamily: "MainFont",
@@ -63,21 +63,11 @@ class _WishlistScreenState extends State<WishlistScreen> {
                     product: products[index],
                     price: prices[index],
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ProductScreen(heroIndex: index),
-                        ),
-                      );
-                    },
+                      context.router.pushAll([ProductRoute(heroIndex: index)]);
+                      },
                     index: index,
                   ),
-                  Positioned(
-                    top: 12,
-                    right: 12,
-                    child:
-                      WHeart(),
-                  ),
+                  Positioned(top: 12, right: 12, child: WHeart()),
                 ],
               );
             },

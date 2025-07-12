@@ -18,7 +18,7 @@ class WDeliveryShippingItem extends StatelessWidget {
           padding: EdgeInsets.only(top: 16, bottom: 18),
           child: Text(
             title,
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: 18,
               fontFamily: "MainFont",

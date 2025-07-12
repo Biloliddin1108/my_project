@@ -17,7 +17,7 @@ class WItemComfort extends StatelessWidget {
         SizedBox(height: 12),
         Text(
           title,
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: AppColors.black,

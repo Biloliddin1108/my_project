@@ -36,7 +36,7 @@ class _WCountButtonState extends State<WCountButton> {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Text(
             "$count",
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontSize: 16,
               fontFamily: "MainFont",
               color: AppColors.black,

@@ -54,7 +54,7 @@ class WCartItem extends StatelessWidget {
                                 Text(
                                   "Delete this product?",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.black,
@@ -66,7 +66,7 @@ class WCartItem extends StatelessWidget {
                                   "Do you want to delete this product?",
                                   textAlign: TextAlign.center,
 
-                                  style: TextStyle(
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                     color: AppColors.grey,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
@@ -115,20 +115,20 @@ class WCartItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const WRating(padding: EdgeInsets.zero),
-              const Padding(
+              Padding(
                 padding:  EdgeInsets.only(top: 6, bottom: 4),
                 child: Text(
                   "Smart Watch",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     color: AppColors.black,
                   ),
                 ),
               ),
-              const Text(
+              Text(
                 "\$120.00",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontFamily: "MainFont",
                   fontWeight: FontWeight.bold,
                   fontSize: 20,

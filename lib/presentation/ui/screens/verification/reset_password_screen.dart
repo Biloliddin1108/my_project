@@ -30,16 +30,16 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     padding: const EdgeInsets.only(top: 30, bottom: 8),
                     child: Text(
                       "Reset",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.black,
                         fontSize: 32,
                       ),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Reset your password",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18,),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18,),
                   ),
                 ],
               ),
@@ -48,7 +48,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 children: [
                   Text(
                     "Enter Your New Password",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: AppColors.black,

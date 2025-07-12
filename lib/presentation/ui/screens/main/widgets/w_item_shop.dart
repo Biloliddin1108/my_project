@@ -24,7 +24,7 @@ class WItemShop extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           title,
-          style: const TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.bold,
             fontSize: 16,
             color: AppColors.black,

@@ -16,7 +16,7 @@ class WEditAddressItem extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               fontFamily: "MainFont",
@@ -31,7 +31,7 @@ class WEditAddressItem extends StatelessWidget {
                 ),
               ),
               hintText: hintText,
-              hintStyle: TextStyle(
+              hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 fontFamily: "MainFont",

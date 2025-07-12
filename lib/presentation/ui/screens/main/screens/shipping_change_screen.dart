@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
@@ -5,6 +6,7 @@ import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
 import '../widgets/w_change_delivery.dart';
 
+@RoutePage()
 class ShippingChangeScreen extends StatefulWidget {
   const ShippingChangeScreen({super.key});
 
@@ -32,9 +34,9 @@ class _ShippingChangeState extends State<ShippingChangeScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+              Text(
                 "Delivery Address",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
@@ -64,7 +66,7 @@ class _ShippingChangeState extends State<ShippingChangeScreen> {
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
                   "Select  Delivery Address :",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     fontFamily: "MainFont",

@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:my_project/presentation/routes/router.gr.dart';
 import 'route_path.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
 class AppRouter extends $AppRouter {
+  @override
   List<AutoRoute> get routes => [
     // ===============
     // Splash Screen
@@ -30,7 +30,6 @@ class AppRouter extends $AppRouter {
           path: RoutePath.home,
           children: [
             AutoRoute(page: HomeRoute.page, path: ""),
-            AutoRoute(page: ProductRoute.page, path: RoutePath.product),
           ],
         ),
         AutoRoute(
@@ -50,5 +49,17 @@ class AppRouter extends $AppRouter {
         ),
       ],
     ),
+    // ===============
+    // Product
+    // ===============
+    AutoRoute(page: ProductRoute.page, path: RoutePath.product),
+    // ===============
+    // Delivery Info
+    // ===============
+    AutoRoute(page: DeliveryInfoRoute.page, path: RoutePath.deliveryInfo),
+    // ===============
+    // Payment Method
+    // ===============
+    AutoRoute(page: PaymentMethodRoute.page, path: RoutePath.paymentMethod),
   ];
 }

@@ -26,7 +26,7 @@ class WDrawerItem extends StatelessWidget {
         ),
         title: Text(
           title,
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             fontFamily: "MainFont",
             color: AppColors.black,
             fontWeight: FontWeight.bold,
