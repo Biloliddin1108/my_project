@@ -38,9 +38,9 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
-                "Shipping Addresses",
-                style: TextStyle(
+              Text(
+                "Delivery Information",
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
@@ -53,7 +53,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(top: 16, bottom: 16),
+        padding: const EdgeInsets.only(top: 10, bottom: 20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -91,7 +91,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                             padding: EdgeInsets.only(top: 16),
                             child: Text(
                               "Default Address :",
-                              style: TextStyle(
+                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                                 fontFamily: "MainFont",
@@ -112,7 +112,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                               },
                               child: Text(
                                 "Change",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
                                   fontFamily: "MainFont",
@@ -159,7 +159,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                                     SizedBox(height: 8),
                                     Text(
                                       "Add",
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                         fontFamily: "MainFont",
@@ -168,7 +168,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
                                     ),
                                     Text(
                                       "Address",
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                         fontFamily: "MainFont",

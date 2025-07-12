@@ -5,10 +5,11 @@ import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/resource/App_icons.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/orders_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/payment_screen.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/shipping_adresses_screen.dart';
+import 'package:my_project/presentation/ui/screens/main/screens/shipping_addresses_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_account_items.dart';
+import 'package:my_project/presentation/ui/state/providers/them_provider.dart';
+import 'package:provider/provider.dart';
 
 @RoutePage()
 class ProfileScreen extends StatefulWidget {
@@ -23,11 +24,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.white,
+        //backgroundColor: AppColors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "My Account",
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.black,
             fontSize: 22,
             fontFamily: "MainFont",
@@ -36,7 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       body: Scaffold(
-        backgroundColor: AppColors.white,
+        //backgroundColor: AppColors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
@@ -48,7 +49,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   padding: const EdgeInsets.only(top: 20, bottom: 4),
                   child: Text(
                     "Saul Goodmate",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontFamily: "MainFont",
@@ -58,7 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Text(
                   "saulgo35@gmail.com",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     fontFamily: "MainFont",
@@ -101,7 +102,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     WAccountItems(
                       title: "Dark Mode",
-                      child: Switch(value: false, onChanged: (_) {}),
+                      child: Consumer<ThemeProvider>(
+                        builder: (context, provider, child) {
+                          return Switch(value: provider.isDarkMode, onChanged: (_) {
+                            provider.toggleTheme();
+                          });
+                        },
+                      ),
                     ),
                     GestureDetector(
                       behavior: HitTestBehavior.opaque,
@@ -125,7 +132,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       alignment: Alignment.topLeft,
                       child: Text(
                         "Logout",
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           fontFamily: "MainFont",

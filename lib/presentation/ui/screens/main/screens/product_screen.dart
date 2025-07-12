@@ -106,7 +106,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   children: [
                     Text(
                       "Smart Watches",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         fontFamily: "MainFont",
@@ -114,7 +114,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     ),
                     Text(
                       "\$120.00",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         fontFamily: "MainFont",
@@ -130,7 +130,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     const WRating(),
                     Text(
                       "Available in stock",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         fontFamily: "MainFont",
@@ -145,7 +145,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
                 Text(
                   "Color Variant",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     fontFamily: "MainFont",
@@ -205,7 +205,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
                 Text(
                   "About this item",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.black,
@@ -218,7 +218,7 @@ class _ProductScreenState extends State<ProductScreen> {
 ssimos ducimus qui blanditiis praesentium 
 voluptatum deleniti atque corrupti quos do
 lores et quas molestias excepturi...""",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.grey,
@@ -230,7 +230,7 @@ lores et quas molestias excepturi...""",
                   """At vero eos et accusamus et iusto odio dig
 ssimos ducimus qui blanditiis praesentium 
 voluptatum deleniti atque .""",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: AppColors.grey,

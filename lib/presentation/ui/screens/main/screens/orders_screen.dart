@@ -36,9 +36,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   },
                   child: SvgPicture.asset(AppIcons.back),
                 ),
-                const Text(
+                Text(
                   "My Orders",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: AppColors.black,
                     fontSize: 22,
                     fontFamily: "MainFont",

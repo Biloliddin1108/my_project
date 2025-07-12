@@ -47,9 +47,9 @@ class _OnboardingScreensState extends State<OnboardingScreens> {
                     bottom: 40,
                     right: 10,
                   ),
-                  child: const Text(
+                  child: Text(
                     'Next',
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: AppColors.primary,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

@@ -37,10 +37,10 @@ class _MainScreenState extends State<MainScreen> {
                 SizedBox(height: 28),
                 Align(
                   alignment: Alignment.center,
-                  child: const Text.rich(
+                  child: Text.rich(
                     TextSpan(
                       text: 'Swip',
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontFamily: "MainFont",
                         fontSize: 28.0,
                         fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
                       children: [
                         TextSpan(
                           text: 'wide',
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontFamily: "MainFont",
                             fontSize: 28.0,
                             color: Colors.black,
@@ -93,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                 color: AppColors.white,
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.grey.withValues(alpha: 0.2),
+                    color: AppColors.grey.withOpacity(0.2),
                     spreadRadius: 3,
                     blurRadius: 7,
                   ),
@@ -104,7 +104,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
               child: BottomNavigationBar(
-                backgroundColor: AppColors.white,
+                backgroundColor: Colors.transparent,
                 elevation: 0,
                 onTap: tabsRouter.setActiveIndex,
                 items: [

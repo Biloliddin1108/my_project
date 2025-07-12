@@ -33,18 +33,18 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+               Text(
                 "Payment Method",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 "Save",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.primary,
                   fontSize: 18,
                   fontFamily: "MainFont",
@@ -65,11 +65,11 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
               const Divider(),
               const SizedBox(height: 20),
               Image.asset(AppImages.newCard),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 24, bottom: 8),
                 child: Text(
                   "Card Holder Name",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     fontFamily: "MainFont",
@@ -86,11 +86,11 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 24, bottom: 8),
                 child: Text(
                   "Card Number",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     fontFamily: "MainFont",
@@ -107,13 +107,13 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                   ),
                 ),
               ),
-              const Row(
+              Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 18),
                     child: Text(
                       "Expiry Date",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         fontFamily: "MainFont",
@@ -125,7 +125,7 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                     padding: EdgeInsets.only(top: 18),
                     child: Text(
                       "CVV",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         fontFamily: "MainFont",

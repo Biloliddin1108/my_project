@@ -31,16 +31,16 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                     padding: const EdgeInsets.only(top: 30, bottom: 8),
                     child: Text(
                       "Forget",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.black,
                         fontSize: 32,
                       ),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Forget your password",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
@@ -51,7 +51,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                     """Please enter your email address below
 you will receive a link to create a new 
 password via email""",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: AppColors.black,

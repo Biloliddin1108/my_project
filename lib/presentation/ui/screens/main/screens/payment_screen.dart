@@ -35,18 +35,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+              Text(
                 "Payment Method",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 "Save",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.primary,
                   fontSize: 18,
                   fontFamily: "MainFont",
@@ -67,11 +67,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const Divider(),
               const SizedBox(height: 20),
               Image.asset(AppImages.card),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 24, bottom: 8),
                 child: Text(
                   "Card Holder Name",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     fontFamily: "MainFont",
@@ -88,11 +88,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 24, bottom: 8),
                 child: Text(
                   "Card Number",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     fontFamily: "MainFont",
@@ -109,13 +109,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   ),
                 ),
               ),
-              const Row(
+              Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 18),
                     child: Text(
                       "Expiry Date",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         fontFamily: "MainFont",
@@ -127,7 +127,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     padding: EdgeInsets.only(top: 18),
                     child: Text(
                       "CVV",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         fontFamily: "MainFont",
@@ -196,7 +196,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                     Text(
                                       "Delete this Card?",
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.black,
@@ -208,7 +208,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                       "Do you want to delete this card?",
                                       textAlign: TextAlign.center,
 
-                                      style: TextStyle(
+                                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         color: AppColors.grey,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600,

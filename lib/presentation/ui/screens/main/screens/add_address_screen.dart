@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../resource/App_icons.dart';
@@ -5,6 +6,7 @@ import '../../../resource/app_colors.dart';
 import '../../../widgets/w_button.dart';
 import '../widgets/w_edit_address_item.dart';
 
+@RoutePage()
 class AddAddressScreen extends StatefulWidget {
   const AddAddressScreen({super.key});
 
@@ -32,9 +34,9 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+              Text(
                 "Add Address",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
@@ -62,10 +64,10 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
               const Divider(),
               Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 12),
-                child: Text("Add New Address", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "MainFont"),),
+                child: Text("Add New Address", style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "MainFont"),),
               ),
               Text("""Fill The Given Details And Create New
-Shipping Address""", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "MainFont", color: AppColors.grey),),
+Shipping Address""", style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "MainFont", color: AppColors.grey),),
               SizedBox(height: 12,),
               WEditAddressItem(title: "Full Name", hintText: "Saul Goodmate"),
               WEditAddressItem(
@@ -85,7 +87,7 @@ Shipping Address""", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,
               WEditAddressItem(title: "Postcode", hintText: "99312"),
               Text(
                 "Add Delivery Instruction",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   fontFamily: "MainFont",
@@ -101,7 +103,7 @@ Shipping Address""", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,
                   ),
                   hintText:
                   "Write Something Here",
-                  hintStyle: TextStyle(
+                  hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     fontFamily: "MainFont",

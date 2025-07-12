@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../resource/App_icons.dart';
@@ -5,6 +6,7 @@ import '../../../resource/app_colors.dart';
 import '../../../widgets/w_button.dart';
 import '../widgets/w_edit_address_item.dart';
 
+@RoutePage()
 class EditAddressScreen extends StatefulWidget {
   const EditAddressScreen({super.key});
 
@@ -32,9 +34,9 @@ class _EditAddressScreenState extends State<EditAddressScreen> {
                 },
                 child: SvgPicture.asset(AppIcons.back),
               ),
-              const Text(
+              Text(
                 "Edit Address",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.black,
                   fontSize: 22,
                   fontFamily: "MainFont",
@@ -78,7 +80,7 @@ class _EditAddressScreenState extends State<EditAddressScreen> {
               WEditAddressItem(title: "Postcode", hintText: "99312"),
               Text(
                 "Add Delivery Instruction",
-                style: TextStyle(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   fontFamily: "MainFont",
@@ -95,7 +97,7 @@ class _EditAddressScreenState extends State<EditAddressScreen> {
                   hintText:
                       """16 E Birch Hill Road Near Fairbanks,
                       New York, United States 99312""",
-                  hintStyle: TextStyle(
+                  hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     fontFamily: "MainFont",

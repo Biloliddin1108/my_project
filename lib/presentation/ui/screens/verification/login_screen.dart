@@ -35,16 +35,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.only(top: 28, bottom: 8),
                     child: Text(
                       "Welcome Back",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.black,
                         fontSize: 32,
                       ),
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Login to your account",
-                    style: TextStyle(color: AppColors.grey, fontSize: 18),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.grey, fontSize: 18),
                   ),
                 ],
               ),
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       child: Text(
                         "Forget Password ?",
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                           color: AppColors.primary,
@@ -97,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 32),
                     child: Text(
                       "Or",
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.grey,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               SizedBox(width: 10),
                               Text(
                                 "Google",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.black,
@@ -149,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               SizedBox(width: 10),
                               Text(
                                 "Facebook",
-                                style: TextStyle(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.black,
@@ -175,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Text(
                           "Sign Up",
-                          style: TextStyle(
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             color: AppColors.primary,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -185,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                   text: "Don’t have an account?",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: AppColors.grey,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,

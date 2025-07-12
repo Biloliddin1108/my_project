@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_arrival.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_item_shop.dart';
-import '../../../routes/route_path.dart';
 import '../../resource/App_icons.dart';
 import '../../resource/app_colors.dart';
 import '../../resource/app_images.dart';
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Text.rich(
                 TextSpan(
                   text: 'Swip',
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 28.0,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     TextSpan(
                       text: 'wide',
-                      style: TextStyle(fontSize: 28.0, color: Colors.black),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 28.0, color: Colors.black),
                     ),
                   ],
                 ),
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: "Search “Smartphone”",
-                    hintStyle: const TextStyle(
+                    hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: AppColors.grey,
                       fontSize: 16,
                       fontFamily: "MainFont",
@@ -128,13 +128,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              const Align(
+               Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding:  EdgeInsets.only(top: 32, bottom: 20),
                   child:  Text(
                     "Shop By Category",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: AppColors.black,
@@ -158,9 +158,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 44, bottom: 18),
-                  child: const Text(
+                  child: Text(
                     "Newest Arrival",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: AppColors.black,
@@ -184,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       product: products[index],
                       price: prices[index],
                       onTap: () {
-                        context.router.pushNamed(RoutePath.product);
+                        context.router.pushAll([ProductRoute(heroIndex:index)]);
                       },
                       index: index,
                     );

@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_item.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_cart_title.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_count_button.dart';
 import 'package:my_project/presentation/ui/widgets/w_button.dart';
+
 
 @RoutePage()
 class CardScreen extends StatefulWidget {
@@ -22,9 +24,9 @@ class _CardScreenState extends State<CardScreen> {
         forceMaterialTransparency: true,
         backgroundColor: AppColors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "Shopping Cart",
-          style: TextStyle(
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.black,
             fontSize: 22,
             fontFamily: "MainFont",
@@ -53,7 +55,7 @@ class _CardScreenState extends State<CardScreen> {
                 decoration: InputDecoration(
                   label: Text(
                     "Promocodes",
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       fontFamily: "MainFont",
@@ -64,7 +66,7 @@ class _CardScreenState extends State<CardScreen> {
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
                         "Apply",
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                           fontFamily: "MainFont",
@@ -80,7 +82,7 @@ class _CardScreenState extends State<CardScreen> {
                 padding: const EdgeInsets.only(top: 48, bottom: 18),
                 child: Text(
                   "Order Info",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     fontFamily: "MainFont",
@@ -95,7 +97,9 @@ class _CardScreenState extends State<CardScreen> {
                 colorSubTitle: AppColors.primary,
               ),
               const SizedBox(height: 48),
-              WButton(onTap: () {}, title: "Checkout"),
+              WButton(onTap: () {
+                context.router.pushAll([DeliveryInfoRoute()]);
+              }, title: "Checkout"),
             ],
           ),
         ),
