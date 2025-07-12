@@ -19,11 +19,11 @@ class _OrdersScreenState extends State<OrdersScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.white,
+        
         appBar: AppBar(
           automaticallyImplyLeading: false,
           forceMaterialTransparency: true,
-          backgroundColor: AppColors.white,
+          
           centerTitle: true,
           title: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),

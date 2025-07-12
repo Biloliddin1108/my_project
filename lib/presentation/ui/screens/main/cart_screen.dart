@@ -22,7 +22,7 @@ class _CardScreenState extends State<CardScreen> {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Text(
           "Shopping Cart",
@@ -34,7 +34,7 @@ class _CardScreenState extends State<CardScreen> {
           ),
         ),
       ),
-      backgroundColor: AppColors.white,
+      
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Padding(

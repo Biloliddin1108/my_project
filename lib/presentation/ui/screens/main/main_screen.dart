@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
         return Scaffold(
           key: scaffoldKeyMain,
           drawer: Drawer(
-            backgroundColor: AppColors.white,
+            
             child: ListView(
               children: [
                 const SizedBox(height: 50),

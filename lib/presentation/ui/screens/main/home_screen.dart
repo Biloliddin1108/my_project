@@ -39,9 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       child: Scaffold(
         key: _scaffoldKey,
-        backgroundColor: AppColors.white,
+        
         appBar: AppBar(
-          backgroundColor: AppColors.white,
+          
           automaticallyImplyLeading: false,
           forceMaterialTransparency: true,
           centerTitle: true,

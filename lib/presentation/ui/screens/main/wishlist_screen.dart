@@ -31,7 +31,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        backgroundColor: AppColors.white,
+        
         centerTitle: true,
         title: Text(
           "Wishlist",

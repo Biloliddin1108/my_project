@@ -24,7 +24,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //backgroundColor: AppColors.white,
         centerTitle: true,
         title: Text(
           "My Account",
@@ -37,7 +36,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       body: Scaffold(
-        //backgroundColor: AppColors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
