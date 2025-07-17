@@ -7,7 +7,6 @@ import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/screens/main/widgets/w_drawer_item.dart';
 import '../../resource/app_images.dart';
 
-
 final GlobalKey<ScaffoldState> scaffoldKeyMain = GlobalKey<ScaffoldState>();
 
 @RoutePage()
@@ -29,7 +28,6 @@ class _MainScreenState extends State<MainScreen> {
         return Scaffold(
           key: scaffoldKeyMain,
           drawer: Drawer(
-            
             child: ListView(
               children: [
                 const SizedBox(height: 50),
@@ -49,7 +47,9 @@ class _MainScreenState extends State<MainScreen> {
                       children: [
                         TextSpan(
                           text: 'wide',
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodyLarge?.copyWith(
                             fontFamily: "MainFont",
                             fontSize: 28.0,
                             color: Colors.black,
@@ -104,7 +104,8 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
               child: BottomNavigationBar(
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.white,
+                type: BottomNavigationBarType.fixed,
                 elevation: 0,
                 onTap: tabsRouter.setActiveIndex,
                 items: [

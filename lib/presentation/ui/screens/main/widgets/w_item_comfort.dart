@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
 
 class WItemComfort extends StatelessWidget {

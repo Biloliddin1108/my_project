@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       routerConfig: _router.config(),
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).themeData,
+
     );
   }
 }

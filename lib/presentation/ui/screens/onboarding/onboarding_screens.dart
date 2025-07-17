@@ -5,7 +5,6 @@ import 'package:my_project/presentation/ui/resource/app_colors.dart';
 import 'package:my_project/presentation/ui/resource/app_images.dart';
 import 'package:my_project/presentation/ui/widgets/w_onboarding.dart';
 import 'package:my_project/presentation/ui/screens/splash/widgets/w_dot.dart';
-import 'package:my_project/presentation/ui/screens/verification/login_screen.dart';
 
 @RoutePage()
 class OnboardingScreens extends StatefulWidget {
@@ -37,8 +36,8 @@ class _OnboardingScreensState extends State<OnboardingScreens> {
                     );
                   } else {
                     context.router.pushAll([
-                       const LoginRoute(),
-                    ]);
+                      const LoginRoute()],
+                    );
                   }
                 },
                 child: Padding(

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_project/presentation/routes/router.gr.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/add_address_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/payment_method_screen.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/shipping_change_screen.dart';
@@ -59,12 +60,7 @@ class _DeliveryInfoStateState extends State<DeliveryInfoScreen> {
           children: [
             WButton(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PaymentMethodScreen(),
-                  ),
-                );
+                context.router.pushAll([const PaymentMethodRoute()]);
               },
               title: "Checkout",
             ),

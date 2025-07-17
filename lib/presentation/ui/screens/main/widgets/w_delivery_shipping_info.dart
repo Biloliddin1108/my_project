@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/presentation/ui/screens/main/screens/add_address_screen.dart';
-import 'package:my_project/presentation/ui/screens/main/screens/edit_address_screen.dart';
-
 import '../../../resource/app_colors.dart';
 
 class WDeliveryShippingInfo extends StatelessWidget {

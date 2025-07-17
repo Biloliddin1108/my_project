@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_project/presentation/ui/screens/main/widgets/w_delivery_shipping_info.dart';
 import '../../../resource/App_icons.dart';
 import '../../../resource/app_colors.dart';
 
@@ -51,11 +52,8 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Delivery Information :',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
+            const Divider(),
+            WDeliveryShippingInfo(name: "Saul Goodmate",),
           ],
         ),
       ),

@@ -39,9 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       child: Scaffold(
         key: _scaffoldKey,
-        
+
         appBar: AppBar(
-          
           automaticallyImplyLeading: false,
           forceMaterialTransparency: true,
           centerTitle: true,
@@ -71,7 +70,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     TextSpan(
                       text: 'wide',
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 28.0, color: Colors.black),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        fontSize: 28.0,
+                        color: Colors.black,
+                      ),
                     ),
                   ],
                 ),
@@ -128,11 +130,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-               Align(
+              Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
-                  padding:  EdgeInsets.only(top: 32, bottom: 20),
-                  child:  Text(
+                  padding: EdgeInsets.only(top: 32, bottom: 20),
+                  child: Text(
                     "Shop By Category",
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
@@ -169,9 +171,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Expanded(
-                child: GridView.builder (
-                  gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
@@ -184,7 +185,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       product: products[index],
                       price: prices[index],
                       onTap: () {
-                        context.router.pushAll([ProductRoute(heroIndex:index)]);
+                        context.router.pushAll([
+                          ProductRoute(heroIndex: index),
+                        ]);
                       },
                       index: index,
                     );
